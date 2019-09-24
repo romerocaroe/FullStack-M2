@@ -1,2 +1,2 @@
 # FullStack-M2
-JavaScript
+My first JavaScript project.
