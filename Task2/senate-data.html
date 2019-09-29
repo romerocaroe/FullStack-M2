@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Congress 113</title>
+        <meta charset = "UTF-8" > 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="btn-group row align-content-end">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-light lead" href="#">TGIF</a></li>
+                <li class="nav-item"><a class="nav-link text-light lead" href="home-starter-page.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light lead" data-toggle="dropdown" href="#" >Congress 113</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a class="nav-link active text-dark lead" href="#">Senate</a></li>
+                        <li class="dropdown-item"><a class="nav-link active text-dark lead" href="house-data.html">House</a></li>
+                    </ul>
+                </li>
+            </ul>
+          </div>
+        </nav>        
+        
+        <header class="">            
+            <div>
+                <img class="rounded mx-auto d-block" alt="logoTGIF" src="image/logoTGIF.jpg" style="width: 280px; height: 240px; padding: 0px 0px 0px 25px">
+                <h2 class="col h1 font-weight-bolder text-monospace text-center ">Senators</h2>
+                <p class="col-12 text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
+            </div>
+        </header>
+        <section>
+            <div class="partyCheckbox text-justify font-weight-light">
+                <label class="checkbox" style="padding: 0px 15px 0px 30px;">
+                    <input type="checkbox" checked="checked" name="R" onchange="checkPartys(this)">Republican</label>
+                <label class="checkbox" style="padding: 0px 15px 0px 0px;">
+                    <input type="checkbox" checked="checked" name="D" onchange="checkPartys(this)">Democrat</label>
+                <label class="checkbox" style="padding: 0px 15px 0px 0px;">
+                    <input type="checkbox" checked="checked" name="I" onchange="checkPartys(this)">Independent</label> 
+                <select class="selectpicker show-menu-arrow show-tick btn form-control-sm" data-live-search="true" data-style="btn-info" id="selectState" onchange='filter(this)'>
+                        <option value="All"> All States </option>
+                        <option class="dropdown-item" value="AK">AK</option>
+                        <option class="dropdown-item" value="AL">AL</option>
+                        <option class="dropdown-item" value="AR">AR</option>
+                        <option class="dropdown-item" value="AZ">AZ</option>
+                        <option class="dropdown-item" value="CA">CA</option>
+                        <option class="dropdown-item" value="CO">CO</option>
+                        <option class="dropdown-item" value="CT">CT</option>
+                        <option class="dropdown-item" value="DE">DE</option>
+                        <option class="dropdown-item" value="FL">FL</option>
+                        <option class="dropdown-item" value="GA">GA</option>
+                        <option class="dropdown-item" value="HI">HI</option>
+                        <option class="dropdown-item" value="IA">IA</option>
+                        <option class="dropdown-item" value="ID">ID</option>
+                        <option class="dropdown-item" value="IL">IL</option>
+                        <option class="dropdown-item" value="IN">IN</option>
+                        <option class="dropdown-item" value="KS">KS</option>
+                        <option class="dropdown-item" value="KY">KY</option>
+                        <option class="dropdown-item" value="LA">LA</option>
+                        <option class="dropdown-item" value="MA">MA</option>
+                        <option class="dropdown-item" value="MD">MD</option>
+                        <option class="dropdown-item" value="ME">ME</option>
+                        <option class="dropdown-item" value="MI">MI</option>
+                        <option class="dropdown-item" value="MN">MN</option>
+                        <option class="dropdown-item" value="MO">MO</option>
+                        <option class="dropdown-item" value="MS">MS</option>
+                        <option class="dropdown-item" value="MT">MT</option>
+                        <option class="dropdown-item" value="NC">NC</option>
+                        <option class="dropdown-item" value="ND">ND</option>
+                        <option class="dropdown-item" value="NE">NE</option>
+                        <option class="dropdown-item" value="NH">NH</option>
+                        <option class="dropdown-item" value="NJ">NJ</option>
+                        <option class="dropdown-item" value="NM">NM</option>
+                        <option class="dropdown-item" value="NV">NV</option>
+                        <option class="dropdown-item" value="NY">NY</option>
+                        <option class="dropdown-item" value="OH">OH</option>
+                        <option class="dropdown-item" value="OK">OK</option>
+                        <option class="dropdown-item" value="OR">OR</option>
+                        <option class="dropdown-item" value="PA">PA</option>
+                        <option class="dropdown-item" value="RI">RI</option>
+                        <option class="dropdown-item" value="SC">SC</option>
+                        <option class="dropdown-item" value="SD">SD</option>
+                        <option class="dropdown-item" value="TN">TN</option>
+                        <option class="dropdown-item" value="TX">TX</option>
+                        <option class="dropdown-item" value="UT">UT</option>
+                        <option class="dropdown-item" value="VA">VA</option>
+                        <option class="dropdown-item" value="VT">VT</option>
+                        <option class="dropdown-item" value="WA">WA</option>
+                        <option class="dropdown-item" value="WI">WI</option>
+                        <option class="dropdown-item" value="WV">WV</option>
+                        <option class="dropdown-item" value="WY">WY</option>
+                    </select>
+            </div>
+        </section>
+            <!--Table container-->
+        <section>
+            <div>
+                <table class="table" id="senateData">
+                    <thead>
+                        <tr class="text-decoration-none">
+                            <th scope="col"><strong>Name</strong></th>
+                            <th scope="col"><strong>Party</strong></th>
+                            <th scope="col"><strong>State</strong></th>
+                            <th scope="col"><strong>Seniority</strong></th>
+                            <th scope="col"><strong>% Votes</strong></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </section>
+        <footer>
+            <div class="bg-dark text-light lead" style="padding: 2px 0px 1px 0px; margin: none;text-align: center;">
+                <p>©2016 TGIF | All Rights Derserved</p>
+            </div>
+        </footer>
+        <script type="text/javascript" src="js/pro-congress-113-senate.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+    </body>  
+</html>
