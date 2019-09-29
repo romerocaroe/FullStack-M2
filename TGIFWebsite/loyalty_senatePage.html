@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Congress 113</title>
+        <meta charset = "UTF-8" > 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    
+    <body>
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+            <div class="btn-group row align-content-end">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-light lead" href="#">TGIF</a></li>
+                <li class="nav-item"><a class="nav-link text-light lead" href="home-starter-page.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light lead" data-toggle="dropdown" href="#" >Congress 113</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a class="nav-link active text-dark lead" href="senate-data.html">Senate</a></li>
+                        <li class="dropdown-item"><a class="nav-link active text-dark lead" href="house-data.html">House</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light lead" data-toggle="dropdown" href="#">Attendance</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a class="nav-link active text-dark lead" href="attendance_senatePage.html">Senate</a></li>
+                        <li class="dropdown-item"><a class="nav-link active text-dark lead" href="attendance_housePage.html">House</a></li>
+                    </ul>
+              </li>  
+              <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light lead" data-toggle="dropdown" href="#">Party Loyalty</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a class="nav-link active text-dark lead" href="#">Senate</a></li>
+                        <li class="dropdown-item"><a class="nav-link active text-dark lead" href="loyalty_housePage.html">House</a></li>
+                    </ul>
+              </li>
+            </ul>
+            </div>
+        </nav>        
+        <header>            
+            <div>
+                <img class="rounded mx-auto d-block" alt="logoTGIF" src="image/logoTGIF.jpg" style="width: 280px; height: 240px; padding: 0px 0px 0px 25px">
+                <h2 class="col h1 font-weight-bolder text-monospace text-center">Party Loyalty</h2>
+            </div>
+        </header>
+        <!--Table container-->
+        <section style="margin: 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-sm-11">
+                        <p class="col-12 text-justify font-weight-light lead" style="margin-top:8%;">Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
+                    </div>
+                    <div class="col-lg-5 col-sm-11">
+                        <h2 class="col h1 font-weight-bolder text-monospace text-center">Senate at a glance</h2>
+                        <table class="table" id="glanceTable"></table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="col h1 font-weight-bolder text-monospace text-center">Least Engaged (Bottom 10% Attendance)</h2>
+                    <table class="table" id="leastEngaged"></table>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="col h1 font-weight-bolder text-monospace text-center">Most Engaged (Top 10% Attendance)</h2>
+                    <table class="table" id="mostEngaged"></table>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-copyright text-center py-2 bg-dark text-light lead" style="overflow: auto;">
+                <p class="text-center">©2016 TGIF | All Rights Derserved</p>
+            </div>
+        </footer>
+        <script src="js/pro-congress-113-senate.js"></script>
+        <script src="js/SAStatistics.js"></script>
+        <script src="js/main.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

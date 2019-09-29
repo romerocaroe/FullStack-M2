@@ -7,73 +7,87 @@
     </head>
     
     <body>
-         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="row align-content-end">
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+            <div class="btn-group row align-content-end">
             <ul class="nav">
                 <li class="nav-item"><a class="nav-link text-light lead" href="#">TGIF</a></li>
                 <li class="nav-item"><a class="nav-link text-light lead" href="#">Home</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light lead" data-toggle="dropdown">Congress 113</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item"><a class="nav-link active text-dark lead" href="senate-data.html">Senate</a></li>
-                            <li class="dropdown-item"><a class="nav-link active text-dark lead" href="house-data.html">House</a></li>
-                        </ul>
+                    <a class="nav-link dropdown-toggle text-light lead" data-toggle="dropdown" href="#" >Congress 113</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a class="nav-link active text-dark lead" href="senate-data.html">Senate</a></li>
+                        <li class="dropdown-item"><a class="nav-link active text-dark lead" href="house-data.html">House</a></li>
+                    </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light lead" data-toggle="dropdown" href="#">Attendance</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a class="nav-link active text-dark lead" href="attendance_senatePage.html">Senate</a></li>
+                        <li class="dropdown-item"><a class="nav-link active text-dark lead" href="attendance_housePage.html">House</a></li>
+                    </ul>
+              </li>  
+              <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light lead" data-toggle="dropdown" href="#">Party Loyalty</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a class="nav-link active text-dark lead" href="loyalty_senatePage.html">Senate</a></li>
+                        <li class="dropdown-item"><a class="nav-link active text-dark lead" href="loyalty_housePage.html">House</a></li>
+                    </ul>
+              </li>
             </ul>
-          </div>
+            </div>
         </nav>        
 
         <header>
             <img class="rounded mx-auto d-block" alt="logoTGIF" src="image/logoTGIF.jpg" style="width: 280px; height: 240px; padding: 0px 0px 0px 25px">
         </header>
         <!--Bootstrap Accordion container-->
-        <section>
-            <div class="container col-md-4 rounded float-right">
-                <div class="row">
-                    <div>
-                        <img src="image/homeImage.jpg" />
+        <section class="container">
+            <div class="row">
+                <div class="accordion col-md-5 col-12" id="myAccordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button type="button" class="btn btn-link text-reset" data-toggle="collapse" data-target="#collapseOne">About Us</button>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#myAccordion">
+                            <p class="text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">
+                                <a href="https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment" class="text-reset">White House</a>
+                            </p>
+                            <p class="text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">Openness, accountability, and honesty define government transparency. In a free society, transparency is government's obligation to share information with citizens. It is at the heart of how citizens hold their public officials accountable. Here at TGIF we believe that government should be transparent.</p>  
+                            <p class="text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">Governments exist to serve the people. Information on how officials conduct the public business and spend taxpayer money must be readily available and easily understood. This transparency allows good and just governance.  Transparency promotes accountability and provides information for citizens about what their Government is doing.</p>  
+                            <p class="text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">We also believe that government should be participatory. Public engagement enhances the Government's effectiveness and improves the quality of its decisions. Knowledge is widely dispersed in society, and public officials benefit from having access to that dispersed knowledge. We invite you to use our site to become actively engaged in American government.</p>
+                            <p class="text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">TGIF works to disclose information in forms that the public can readily find and use. We solicit public feedback to identify information of greatest use to the public.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="accordion col-md-8 col-sm-11" id="myAccordion">
-                <div class="card">
-                    <div class="card-header" id="headingOne">
-                        <h2 class="mb-0">
-                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">About Us</button>
-                        </h2>
-                    </div>
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#myAccordion">
-                        <p class="col-12 text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px"><a href="https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment">White House</a></p>
-                        <p class="col-12 text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">Openness, accountability, and honesty define government transparency. In a free society, transparency is government's obligation to share information with citizens. It is at the heart of how citizens hold their public officials accountable. Here at TGIF we believe that government should be transparent.</p>  
-                        <p class="col-12 text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">Governments exist to serve the people. Information on how officials conduct the public business and spend taxpayer money must be readily available and easily understood. This transparency allows good and just governance.  Transparency promotes accountability and provides information for citizens about what their Government is doing.</p>  
-                        <p class="col-12 text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">We also believe that government should be participatory. Public engagement enhances the Government's effectiveness and improves the quality of its decisions. Knowledge is widely dispersed in society, and public officials benefit from having access to that dispersed knowledge. We invite you to use our site to become actively engaged in American government.</p>
-                        <p class="col-12 text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">TGIF works to disclose information in forms that the public can readily find and use. We solicit public feedback to identify information of greatest use to the public.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h2 class="mb-0">
-                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo">Background History of Government Transparency</button>
-                        </h2>
-                    </div>
-                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#myAccordion">
-                        <div class="card-body">
-                            <p class="col-12 text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">In the West, the idea that government should be open to public scrutiny and susceptible to public opinion dates back at least to the time of the Enlightenment, when many philosophes made an attack on absolutist doctrine of state secrecy, a core part of their intellectual project. The passage of formal legislative instruments to this end can also be traced to this time with Sweden, for example, (which then included Finland as a Swedish-governed territory) enacting free press legislation as part of its constitution (Freedom of the Press Act, 1766). This approach, and that of the philosophes more broadly, is strongly related to recent historiography on the eighteenth-century public sphere.
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button type="button" class="btn btn-link collapsed text-reset" data-toggle="collapse" data-target="#collapseTwo">Background History of Government Transparency</button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#myAccordion">
+                            <div class="card-body">
+                                <p class="text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">In the West, the idea that government should be open to public scrutiny and susceptible to public opinion dates back at least to the time of the Enlightenment, when many philosophes made an attack on absolutist doctrine of state secrecy, a core part of their intellectual project. The passage of formal legislative instruments to this end can also be traced to this time with Sweden, for example, (which then included Finland as a Swedish-governed territory) enacting free press legislation as part of its constitution (Freedom of the Press Act, 1766). This approach, and that of the philosophes more broadly, is strongly related to recent historiography on the eighteenth-century public sphere. </p>
 
-                           <p class="col-12 text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">Influenced by Enlightenment thought, the revolutions in America (1776) and France (1789), freedom of the press enshrined provisions and requirements for public budgetary accounting and freedom of the press in constitutional articles. In the nineteenth century, attempts by Metternichean statesmen to row back on these measures were vigorously opposed by a number of eminent liberal politicians and writers, Bentham, Mill and Acton prominent among the latter.</p>
+                               <p class="text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">Influenced by Enlightenment thought, the revolutions in America (1776) and France (1789), freedom of the press enshrined provisions and requirements for public budgetary accounting and freedom of the press in constitutional articles. In the nineteenth century, attempts by Metternichean statesmen to row back on these measures were vigorously opposed by a number of eminent liberal politicians and writers, Bentham, Mill and Acton prominent among the latter.</p>
 
-                           <p class="col-12 text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">Open government is widely seen to be a key hallmark of contemporary democratic practice and is often linked to the passing of freedom of information legislation. Scandinavian countries claim to have adopted the first freedom of information legislation, dating the origins of its modern provisions to the eighteenth century and Finland continuing the presumption of openness after gaining independence in 1917, passing its Act on Publicity of Official Documents in 1951 (superseded by new legislation in 1999).</p>
+                               <p class="text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">Open government is widely seen to be a key hallmark of contemporary democratic practice and is often linked to the passing of freedom of information legislation. Scandinavian countries claim to have adopted the first freedom of information legislation, dating the origins of its modern provisions to the eighteenth century and Finland continuing the presumption of openness after gaining independence in 1917, passing its Act on Publicity of Official Documents in 1951 (superseded by new legislation in 1999).</p>
 
-                           <p class="col-12 text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">The United States passed its Freedom of Information Act (FOIA) in 1966, FOIAs, Access to Information Acts (AIAs) or equivalent laws were passed in Denmark and Norway in 1970.</p>
+                               <p class="text-justify font-weight-light lead" style="padding: 0px 30px 0px 30px">The United States passed its Freedom of Information Act (FOIA) in 1966, FOIAs, Access to Information Acts (AIAs) or equivalent laws were passed in Denmark and Norway in 1970.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="col-md-6 col-12 corounded float-right" style="padding: 0px 0px 30px 0px">
+                        <div>
+                            <img src="image/homeImage.jpg" />
+                        </div>
+                    </div>
+                </div>
         </section>
         <footer>
-            <div class="footer-copyright text-center py-2 bg-dark text-light lead" style="overflow: auto;">
+            <div class="footer-copyright text-center py-2 bg-dark text-light lead">
                 <p class="text-center">©2016 TGIF | All Rights Derserved</p>
             </div>
         </footer> 
