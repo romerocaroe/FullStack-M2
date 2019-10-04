@@ -1,14 +1,75 @@
-var app = new Vue({
-  el: '#app',
-  data: {
-    ...
-  }
-});
+//var app = new Vue({
+//  el: '#app',
+// data: {
+//    ...
+//  }
+
 var members = data.results[0].members;
 var glanceTable = document.getElementById('glanceTable');
 var leastEngaged = document.getElementById('leastEngaged');
 var mostEngaged = document.getElementById('mostEngaged');
 var theTable;
+var elSenateTable = document.getElementById('senateData');
+
+var checkArrays = ['R', 'D', 'I'];
+var select = "";
+
+
+function addTableToHTML(membersFunction) {
+    var theHtml = "<tbody>";
+    membersFunction.forEach(nodo => {
+        theHtml += "<tr>";
+        if (nodo.middle_name === null) {
+            theHtml += '<td><a class="text-dark" href="' + nodo.url + '">' + nodo.first_name + ' ' + nodo.last_name + '</td>';
+        } else {
+            theHtml += '<td><a class="text-dark" href="' + nodo.url + '">' + nodo.first_name + ' ' + nodo.middle_name + ' ' + nodo.last_name + '</td>';
+        }
+        theHtml += '<td class="Party">' + nodo.party + '</td>';
+        theHtml += '<td class="State">' + nodo.state + '</td>';
+        theHtml += '<td>' + nodo.seniority + '</td>';
+        theHtml += '<td>' + nodo.votes_with_party_pct + '% </td>';
+        theHtml += '</tr>';
+    });
+    theHtml += '</tbody>';
+    elSenateTable.innerHTML = theHtml;
+}
+
+
+function filter() {
+    var filtered = [];
+    var joinFiltered = [];
+    let selected = document.querySelector("#selectState").value;
+    if(selected=="All"){
+        checkArrays.forEach(element => {
+        filtered = members.filter(member => member.party === element);
+        filtered.forEach(element => {
+                joinFiltered.push(element);
+            })
+        });
+            
+        }else{
+            checkArrays.forEach(element => {            
+            filtered = members.filter(member => member.party === element && member.state === selected);
+            filtered.forEach(element => {
+                joinFiltered.push(element)});
+                            });
+            
+        }
+    addTableToHTML(joinFiltered);
+}
+
+function checkPartys(element){
+    elSenateTable.innerHTML = "";
+    element.checked ? checkArrays.push(element.name) : checkArrays.splice(checkArrays.indexOf(element.name),1);
+    filter(members);
+}
+
+function checkStates(element){
+    elSenateTable.innerHTML = "";
+    let selected = querySelector("#selectState").value;
+    element.checked ? selected.push(element.name) : selected.splice(selected.indexOf(element.name),1);
+    filter(members);
+}
 
 //second (Number of members)
 var members = data.results[0].members;
@@ -29,7 +90,7 @@ function numberOfSenators(data) {
         }
     });
 };
-numberOfSenators(members);
+//numberOfSenators(members);
 
 //third (Votes with Party)
 function averageVotesWithParty (x,y){
@@ -44,9 +105,9 @@ function averageVotesWithParty (x,y){
     var averageThirdFunctionRounded = Math.round(averageThirdFunction);
     statistics.membersStatistics[0].partys[y].averageVotesWhithParty = averageThirdFunctionRounded;
 }
-averageVotesWithParty(statistics.membersStatistics[0].partys[0].membersParty, 0);
-averageVotesWithParty(statistics.membersStatistics[0].partys[1].membersParty, 1);
-averageVotesWithParty(statistics.membersStatistics[0].partys[2].membersParty, 2);
+//averageVotesWithParty(statistics.membersStatistics[0].partys[0].membersParty, 0);
+//averageVotesWithParty(statistics.membersStatistics[0].partys[1].membersParty, 1);
+//averageVotesWithParty(statistics.membersStatistics[0].partys[2].membersParty, 2);
 
 // glance table.
 function addTableToHTMLglance() {
@@ -69,7 +130,7 @@ function addTableToHTMLglance() {
     theHtml += "</tbody>";
     glanceTable.innerHTML = theHtml;
 }
-addTableToHTMLglance();
+//addTableToHTMLglance();
 //fourth (members who least often vote with their party).
 function whoLeastOftenVote (){
     members.sort(function (a, b) {
@@ -77,13 +138,13 @@ function whoLeastOftenVote (){
     })
     tableLeastEngaged();
 }
-whoLeastOftenVote();
+//whoLeastOftenVote();
 
 function whoMostOftenVote (){
     members.reverse();
     tableMostEngaged();
 }
-whoMostOftenVote();
+//whoMostOftenVote();
 
 function tableLeastEngaged (){
     theTable = document.createElement("tbody");

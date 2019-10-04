@@ -109,7 +109,8 @@
             <!--Table container-->
         <section>
             <div> 
-                <table class="table">
+                <table class="table" id="senateData">
+                    <!--Before, it was called "houseData", but i changed for be able to use only one JS file.-->
                     <thead>
                         <tr class="text-decoration-none">
                             <th scope="col"><strong>Name</strong></th>
@@ -119,8 +120,6 @@
                             <th scope="col"><strong>% Votes</strong></th>
                         </tr>
                     </thead>
-                    <tbody id="houseData">
-                    </tbody>
                 </table>
             </div>
         </section>
@@ -129,8 +128,11 @@
                 <p>©2016 TGIF | All Rights Derserved</p>
             </div>
         </footer>
+
+        <!-- Start Scripts -->
         <script type="text/javascript" src="js/pro-congress-113-house.js"></script>
-        <script type="text/javascript" src="js/houseTaskTwo.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript">addTableToHTML(members);</script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
