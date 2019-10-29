@@ -1,0 +1,77 @@
+body {
+	margin: 0;
+ 	height: 100%;
+	position: relative;
+	background-color: #303030;
+	background-image: url('../image/obelisk.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;	
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.header{
+
+}
+
+.navbar {
+}
+
+button {
+	padding: 4px 5%;
+	border: 2px solid #ede6d1;
+	background-color: transparent;
+	size: 2em 10em;
+	border-radius: 8px;
+	color: #ede6d1;
+	padding: 
+}
+
+button:hover {
+	background-color: #ede6d1;
+	color: #8a867b;
+
+}
+
+.name {
+	font-family:FuturaStd-Book,Futura,"Trebuchet MS",Arial,sans-serif;
+	font-weight:100!important;
+	height:100%;
+	color:#000;
+	padding-top:100px;
+	text-align: center;
+	font-size: 10vw;
+	color: white;
+}
+
+.name:hover {
+	color: #ede6d1;
+  	letter-spacing: 0.01em;
+}
+
+
+
+p {
+	color: #ffffff;
+	text-shadow: 0.2px 0.2px #ede6d1;
+}
+
+h2 {
+	color: #ffffff;
+	text-shadow: 0.3px 0.3px #ede6d1;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+h1 {
+
+	color: #ffffff;
+	font-style: none;
+	font-size: 0.5em;
+}
